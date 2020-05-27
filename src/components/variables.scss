@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comfortaa:wght@300;400;500;600;700&family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+$primary: #22303d; // rgba(34, 48, 61, 1)
+$primary60: rgba(34, 48, 61, .65);
+// $primaryWeaker: lighten(#22303d, 0%); //10%);
+$primaryWeaker: lighten($primary, 10%); //10%);
+
+$action: #3498db;
+
+$bodyBackground: #eee;
+
+// rgba(230, 126, 34,1.0)
+
+$dominantHeaderHeight: 0px;
+$dominantHeaderBlurRadius: 2px;
+$headerBarHeight: 60px;

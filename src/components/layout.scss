@@ -1,0 +1,182 @@
+@import "variables";
+@import "~animate.css/animate.css";
+
+html, body, #___gatsby, #___gatsby > div, .app-container {
+    margin: 0;
+    height: 100%;
+}
+
+html {
+    font-family: 'Manrope', sans-serif;
+    background-color: $bodyBackground;
+}
+
+*:focus {
+    outline: none;
+}
+
+.app-container {
+}
+
+header {
+    height: $dominantHeaderHeight + $headerBarHeight - 2 * $dominantHeaderBlurRadius;
+    background-color: $primary;
+    position: relative;
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: $dominantHeaderHeight;
+        width: 100%;
+        background-color: $primary60;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            margin: 0;
+            font-size: 8rem;
+            font-family: 'Bebas Neue', sans-serif;
+            color: white;
+            color: rgba(255,255,255, .15);
+        }
+    }
+
+    &.enter {
+        transition: .4s height ease;
+        height: 100%;
+        overflow: hidden;
+        .dominant-header {
+            transition: .4s height ease;
+            height: 100%;
+        }
+        .overlay {
+            transition: .4s height ease;
+            height: unset;
+            bottom: $headerBarHeight;
+            overflow: auto;
+        }
+
+        nav {
+            top: unset;
+            bottom: 0;
+            height: $headerBarHeight + 20px;
+            transition: .36s all ease;
+        }
+    }
+
+    &.closing {
+        height: $headerBarHeight;
+        transition: .4s height ease;
+        overflow: hidden;
+        .dominant-header, .overlay {
+            transition: .4s height ease;
+            height: 0;
+            > * {
+                opacity: 0;
+                transition: .2s opacity ease;
+            }
+        }
+        nav {
+            transition: .4s all ease;
+            top: 0;
+            bottom: unset;
+        }
+    }
+}
+
+nav {
+    position: absolute;
+    top: $dominantHeaderHeight - $dominantHeaderBlurRadius * 2;
+    left: 0;
+    width: 100%;
+    height: $headerBarHeight;
+    background-color: $primary;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+
+    ul, li {
+        margin: 0;
+    }
+    ul {
+        list-style-type: none;
+        margin: 0 2rem;
+        padding: 0;
+        overflow: hidden;
+        height: 100%;
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+    }
+    li {
+    }
+    button {
+        border: none;
+        text-decoration: none;
+        background-color: transparent;
+        margin: 8px 12px;
+        padding: 0 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        color: white;
+        cursor: pointer;
+        transition: .1s all ease;
+        outline: none;
+        font-size: 1em;
+        font-family: 'Manrope', sans-serif;
+
+        &:hover {
+            background-color: white;
+            color: $primary;
+            box-shadow: 0 2px 3px rgba(0, 0, 0, .15);
+            // transform: translate(0,-4px);
+        }
+
+        &:active {
+            transition: .05s background-color ease;
+            background-color: $action;
+            color: white;
+        }
+
+        &:focus:not(:active) {
+            // box-shadow: 0 0 0 4px $primaryWeaker;
+            background-color: white;
+            color: $primary;
+            // transform: translateY(-4px);
+        }
+    }
+}
+
+.dominant-header {
+    height: $dominantHeaderHeight;
+
+
+    &, :before, :after {
+        filter: blur($dominantHeaderBlurRadius);
+        -webkit-filter: blur($dominantHeaderBlurRadius);
+    }
+}
+
+.title-content {
+    max-width: 100%;
+    // max-height: 100%;
+    max-height: calc(100% - 60px);
+    overflow: auto;
+    padding: 40px;
+    // padding: 500px 300px 200px 300px;
+    color: rgba(255, 255, 255, .85);
+    font-size: 1.8em;
+    font-weight: 100;
+    box-sizing: border-box;
+
+    a {
+        color: white;
+    }
+}
+
+@media (min-width: 750px) {
+    .title-content {
+        padding: 60px 200px;
+    }
+}
