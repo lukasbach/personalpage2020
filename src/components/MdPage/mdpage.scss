@@ -1,0 +1,237 @@
+@import "../variables";
+
+.title-container {
+  min-height: 180px;
+  border-radius: 32px;
+
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  z-index: -1;
+
+  $col1: $bodyBackground;
+  $col2: darken($bodyBackground, 2%);
+  $dist: 20px;
+  background: repeating-linear-gradient(45deg, $col1, $col1 $dist, $col2 $dist, $col2 $dist + $dist);
+
+  h1 {
+    margin: 8px 24px;
+    font-size: 4em;
+    // color: $action;
+  }
+
+  > svg, > img {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    display: none;
+  }
+}
+
+.content-container {
+  display: flex;
+  align-items: flex-start;
+
+  .text {
+    width: 100%;
+    font-size: 1.2em;
+    font-family: Manrope, sans-serif;
+    line-height: 1.6;
+    font-weight: 200;
+
+    img, svg {
+      max-width: 100%;
+    }
+
+    pre {
+      white-space: break-spaces;
+    }
+
+    .gatsby-resp-image-image, img {
+      box-shadow: none !important;
+    }
+
+    a.gatsby-resp-image-link:hover {
+      background-color: transparent !important;
+    }
+  }
+
+  .downloads {
+    list-style-type: none;
+
+    a {
+      display: block;
+      margin: 8px 0;
+
+      li {
+        display: flex;
+        align-items: center;
+      }
+
+      svg {
+        background-color: $action;
+        color: white;
+        padding: 12px;
+        border-radius: 64px;
+        margin-right: 16px;
+      }
+
+      background-color: transparent !important;
+
+      &:hover, &:focus {
+        svg {
+          background-color: white;
+          color: $action;
+        }
+      }
+    }
+  }
+
+  .infobar {
+    min-height: 200px;
+    min-width: 320px;
+    margin: -140px 20px 0 80px;
+    // border-top: 20px solid white;
+    padding: 10px 0 0 0;
+
+    > img, > svg {
+      width: 80%;
+      margin-left: 10%;
+      margin-bottom: 30px;
+    }
+
+    h3 {
+      border-bottom: 4px solid white;
+      margin: 0 0 5px 0;
+      padding: 10px 10px;
+    }
+
+    section {
+      margin: 0 0 10px 0;
+      padding: 8px 12px;
+      border: 4px solid white;
+      background-color: $bodyBackground;
+    }
+
+    button, a.button {
+      display: block;
+      background-color: $action;
+      color: $bodyBackground;
+      width: 100%;
+      margin: 4px 0 6px 0;
+      padding: 8px 16px;
+      border: none;
+      font-weight: 900;
+      font-size: 1em;
+      cursor: pointer;
+      transition: .1s all ease;
+      box-sizing: border-box;
+      text-align: center;
+
+      svg {
+        margin-right: 10px;
+      }
+
+      &:hover {
+        box-shadow: 6px 6px 0 darken($bodyBackground, 8%);
+        transform: translate(-3px, -3px);
+      }
+      &:active {
+        box-shadow: none;
+        transform: none;
+        background-color: white;
+        color: $action;
+      }
+      &:focus:not(:hover):not(:active) {
+        color: white;
+      }
+    }
+
+  }
+}
+
+.content-container a {
+  text-decoration: none;
+}
+
+.content-container .infobar .info-section {
+  display: flex;
+  color: white;
+  margin: 0 0 10px 0;
+  padding: 0;
+
+  > .ico {
+    margin: 5px 10px;
+  }
+  > :not(.ico) {
+    flex-grow: 1;
+  }
+
+  h4 {
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+    color: darken(#fff, 20%);
+  }
+
+  .meta {
+    float: right;
+    font-weight: normal;
+  }
+
+  &:hover, &:focus {
+    color: $action;
+    background-color: transparent;
+    p {
+      color: darken($action, 20%);
+    }
+  }
+}
+
+.cli-input {
+  display: flex;
+  background-color: darken($bodyBackground, 5%);
+  border-radius: 8px;
+  padding: 16px 12px;
+  margin: 16px 0 8px 0;
+
+  svg {
+    width: 32px !important;
+    margin-right: 12px;
+  }
+
+  input {
+    background-color: transparent;
+    flex-grow: 1;
+    color: white;
+    font-family: "Courier New", monospace;
+    border: none;
+    font-size: 1em;
+  }
+
+  &.has-copied {
+  }
+  &:hover:not(.has-copied) {
+    background-color: darken($bodyBackground, 7%);
+  }
+}
+
+
+@media (max-width: 1000px) {
+  .title-container {
+    > img, > svg {
+      display: block !important;
+    }
+  }
+  .content-container {
+    display: block;
+    .infobar {
+      margin: 0 !important;
+      > img, > svg {
+        display: none;
+      }
+    }
+  }
+}

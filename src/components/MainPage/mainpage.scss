@@ -1,0 +1,132 @@
+@import "../variables";
+
+
+.mainpage-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1600px;
+  padding: 48px;
+  margin: auto;
+}
+
+.mainpage-container header {
+  width: 600px;
+
+  h1 {
+    margin: 0;
+    font-size: 6rem;
+    text-transform: uppercase;
+    font-weight: 900;
+
+    span {
+      color: $action;
+    }
+  }
+
+  p {
+    text-align: justify;
+  }
+
+  main {
+    margin-top: -40px;
+    font-size: 1.4rem;
+  }
+}
+
+.mainpage-container nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+
+  a {
+    background-color: transparent;
+    padding: 0;
+    min-width: 370px;
+    margin: 30px 40px 30px 0;
+  }
+
+  a button {
+    background-color: transparent;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 60px 40px 50px 40px;
+    border: 8px solid white;
+    cursor: pointer;
+    font-size: 2.2rem;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-family: inherit;
+    transition: .1s all ease;
+
+    &:focus {
+      border-color: $action;
+      color: $action;
+    }
+
+    &:hover {
+      background-color: $action;
+      border-color: $action;
+      color: $bodyBackground;
+
+      box-shadow: 12px 12px 0 darken($bodyBackground, 8%);
+      transform: translate(-12px, -12px);
+
+      // background-color: $action;
+      // border-color: $action;
+      // color: white;
+    }
+
+    &:active {
+      transition: .05s all ease;
+      background-color: white;
+      border-color: white;
+      color: $action;
+      box-shadow: none;
+      transform: none;
+    }
+  }
+}
+
+
+@media (max-width: 1500px) {
+  .mainpage-container nav {
+    width: 370px;
+    margin-left: 64px;
+    a {
+      width: 100%;
+      margin: 32px 0 0 48px;
+      button {
+        padding: 16px 40px 12px 40px;
+        border: 4px solid white;
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .mainpage-container {
+    flex-direction: column;
+    margin: 64px 0;
+
+    nav a, nav {
+      width: 100%;
+      margin-left: 0;
+    }
+
+    footer {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 680px) {
+  header {
+    width: unset !important;
+  }
+  .mainpage-container header h1 {
+    font-size: 4rem;
+  }
+}

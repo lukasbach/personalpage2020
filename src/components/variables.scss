@@ -1,13 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comfortaa:wght@300;400;500;600;700&family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 
-$primary: #22303d; // rgba(34, 48, 61, 1)
+$primary: #2b2b2b; //#22303d; // rgba(34, 48, 61, 1)
 $primary60: rgba(34, 48, 61, .65);
 // $primaryWeaker: lighten(#22303d, 0%); //10%);
 $primaryWeaker: lighten($primary, 10%); //10%);
 
+$action: #E8BD36; // #3498db;
 $action: #3498db;
+$action: #88C0D0;
+// $action: rgb(120, 194, 210);
+// $action: #e83636; // #3498db;
 
-$bodyBackground: #eee;
+$bodyBackground: #2f2f32;
 
 // rgba(230, 126, 34,1.0)
 

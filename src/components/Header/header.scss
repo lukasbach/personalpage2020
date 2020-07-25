@@ -1,0 +1,130 @@
+@import "../variables";
+
+.page-header {
+  width: 100%;
+  min-height: 40px;
+  background-color: darken($bodyBackground, 2%);
+  border-top: 10px solid $action;
+  display: flex;
+  align-items: center;
+
+  &.hover {
+    background-color: darken($bodyBackground, 4%);
+  }
+
+  > a {
+    flex-grow: 1;
+    padding-left: 40px;
+    font-size: 2.4em;
+    font-weight: 900;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    background-color: transparent !important;
+
+    span {
+      color: $action;
+    }
+
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  nav {
+    margin-right: 20px;
+  }
+
+  nav a {
+    background-color: transparent;
+    display: inline-block;
+    position: relative;
+    margin: 10px 0 10px 0;
+    padding: 16px 12px 8px 12px;
+    border: none;
+    border-bottom: 8px solid transparent;
+    cursor: pointer;
+    font-size: 1.4em;
+    font-weight: 900;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: inherit;
+
+    &:visited {
+      color: white;
+      text-decoration: none;
+    }
+
+    &:hover:not(.active) {
+      background-color: $action;
+      color: white;
+    }
+
+    &.active:hover {
+      color: white;
+      border-color: white;
+    }
+
+    &:active:not(.active) {
+      background-color: white;
+      color: $action;
+    }
+
+    &.active {
+      color: $action;
+      border-color: $action;
+    }
+
+    &:focus:not(.active):not(:active) {
+      border-color: $action;
+    }
+  }
+
+  .mobile-toggle {
+    display: none;
+    background-color: $action;
+    border: none;
+    padding: 12px 16px;
+    margin: 12px 16px 12px 0;
+    font-size: 16px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: white;
+      color: $bodyBackground;
+    }
+
+    &:focus {
+      outline: 4px solid white;
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  header {
+    flex-wrap: wrap;
+  }
+  .mobile-toggle {
+    display: block !important;
+  }
+  header:not(.mobile-toggled) .nav-items {
+    display: none;
+  }
+  .padded {
+    padding: 40px 120px;
+  }
+  nav {
+    width: 100%;
+  }
+  nav .nav-items a {
+    background-color: darken($bodyBackground, 3%);
+    width: 100%;
+    margin: 0;
+
+    &.active {
+      border-color: transparent;
+    }
+  }
+}
