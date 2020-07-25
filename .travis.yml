@@ -1,13 +1,11 @@
 language: node_js
 node_js: 14
 dist: trusty
-before_deploy: yarn build
 deploy:
 - provider: pages
-  skip_cleanup: true,
+  skip_cleanup: true
   local_dir: public
-  target_branch: gh-pages,
-  github_token:
-    secure: ZqHyCczsvDpS9AUNBKps19WbXC1q5V0H44QHrq8aRehtK6Nb6tuNVf4ki0FC+WxpvNNloP7B6S3q7g2ffEZxfm+MYyJZ7z73qdNZXjHwxpLRtctcerFMR++yx/hEAWje9BrQuIzqhdNJyKwQ+rHJtyoM67p3VLGkA26myvJ955gRg8b3xqCJDRfmGdnExkq13uVnrrXye78hW3N0mXP6itj8Lf0s1GPL4Q41Klpq3NYUblNkXd18viP9Ue9LXU/c3e4DjTR86pgU17ADs4BoSvaZS9cQ2QgiEqbhcCK1DCrPVuMIQBElSxjd/igDC0cu1S92YP7ml5ZRr8yE8K2DvXP8vb7dH26i+ml+XFKVRhO0AUVAdfBUC5C5sIfk1mMNK2+83C5ioUjSiVNPiAiH7V/vOLBvL+GB3cqk6FGNLux4hYLAUqKdjuoHeOmgl67P0W6TYEPNUEz6gIXVfq/QAQgfCu6AQjk1iPPV9VoHDWbJbPSVQ4OfbLPwfjB0M+JypDLRx5TsLjl5Xhe8Okyy8BRM4YWApra1jBmKcibNbJD3Ch+cZrc+1VX4Xgyl8ybx6gs3LPNFZqxn7JqolTFmfG2naNm25RAyR9dIR+4Pl3Rj8NslylpCCnZYGie/4UE2t0GToG9g18tLBIeMvG7b8TA/3Nt/1uph1ybBlM7s90Q=
+  target_branch: gh-pages
+  github_token: "$GITHUB_TOKEN"
   on:
     branch: master
