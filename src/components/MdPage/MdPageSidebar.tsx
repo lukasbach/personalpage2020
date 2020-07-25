@@ -19,7 +19,7 @@ export const MdPageSidebar: React.FC<MdPageFrontmatter> = props => {
         <a href={props.website} target="_blank" className="button"><FontAwesomeIcon icon="external-link-alt" />Go to Website</a>
       )}
       { props.github && (
-        <a href={`https://github.com/${props.github.url}`} target="_blank" className="button"><FontAwesomeIcon icon={['fab', 'github']} />GitHub Repo</a>
+        <a href={props.github.url} target="_blank" className="button"><FontAwesomeIcon icon={['fab', 'github']} />GitHub Repo</a>
       )}
       <Cli {...props} />
       <Downloads {...props} />

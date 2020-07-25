@@ -84,11 +84,11 @@ a {
 }
 
 .gatsby-highlight {
-    width: 100%;
-    font-size: .8em;
+    width: 100% !important;
+    font-size: .8em !important;
     pre, code {
-        background-color: darken($bodyBackground, 3%);
-        white-space: break-spaces;
+        background-color: darken($bodyBackground, 3%) !important;
+        white-space: break-spaces !important;
     }
 }
 .language-text {

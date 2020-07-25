@@ -14,8 +14,6 @@ SWQuote is a small NodeJS Webapp, in which you can search for spoken phrases fro
 
 See the demo in action here: https://swquote.herokuapp.com/
 
-Project page: http://lukasbach.com/current/swquote
-
 ## How it works
 
 The application backend scans the subtitles file for the movie and creates an index in which it can search for quotes. The subtitle file maps small chunks of text to a start time and an end time, so when a quote search query is coming in, it looks through all those text chunks, matching the quote against the text. If it finds a matching text, it continues to match the rest of the quote against the following text chunks.
