@@ -12,6 +12,10 @@ npm:
     - pdfjoin
 ---
 
+> Note: I've recently launched [Toolbelt](https://lukasbach.github.io/toolbelt/),
+> a tool that also allows merging PDFs online without having to download
+> anything. No size limit and super quick!
+
 This commandline-tool allows you to quickly merge multiple
 PDF files into one.
 

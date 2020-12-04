@@ -20,7 +20,16 @@ const IndexPage = () => {
 
   return (
     <MainPage>
-      { site.siteMetadata.description.split('\n').map(d => <p children={d} />) }
+      <p>
+        Hello there! I'm a Web Developer from Karlsruhe, passionate about React and TypeScript, but working with all
+        sorts of technologies.
+      </p>
+
+      <p>
+        Currently I am studying Computer Science and finishing my Master of Science in early 2021, while working at
+        LogMeIn as working student. I've worked on various personal projects, the most recent one being the feature-rich
+        notebook app <a href="https://yana.js.org" target="_blank">Yana</a>.
+      </p>
 
       <ContactButtonContainer small={true} right={true}>
         <ContactButton icon={ faGithub as any } href="https://github.com/lukasbach" title="My GitHub"/>

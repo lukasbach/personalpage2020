@@ -6,7 +6,7 @@ import {
   faCheckSquare, faCircleNotch,
   faCoffee, faCubes,
   faDownload, faExclamationCircle,
-  faExternalLinkAlt, faFlag, faFolderOpen, faGraduationCap, faHighlighter, faInfoCircle, faPencilAlt,
+  faExternalLinkAlt, faFlag, faFolderOpen, faGraduationCap, faHammer, faHighlighter, faInfoCircle, faPencilAlt,
   faTag, faTerminal,
 } from '@fortawesome/free-solid-svg-icons';
 import { fab, faGalacticRepublic, faGithub, faJs, faJsSquare } from '@fortawesome/free-brands-svg-icons';
@@ -33,5 +33,6 @@ library.add(
   faGraduationCap,
   faInfoCircle,
   faCubes,
-  faPencilAlt
+  faPencilAlt,
+  faHammer
 )
