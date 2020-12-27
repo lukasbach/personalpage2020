@@ -4,6 +4,7 @@ import { ContactButtonContainer } from '../components/ContactButtons/ContactButt
 import { ContactButton } from '../components/ContactButtons/ContactButton';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { graphql, useStaticQuery } from 'gatsby';
+import SEO from '../components/seo';
 
 const IndexPage = () => {
   const { site } = useStaticQuery(
@@ -20,6 +21,11 @@ const IndexPage = () => {
 
   return (
     <MainPage>
+      <SEO
+        title="Lukas Bach"
+        description="Hello there! I'm a Web Developer from Karlsruhe, passionate about React and TypeScript, but working with all sorts of technologies."
+        lang="en"
+      />
       <p>
         Hello there! I'm a Web Developer from Karlsruhe, passionate about React and TypeScript, but working with all
         sorts of technologies.
