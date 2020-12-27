@@ -69,6 +69,10 @@ const SEO: React.FC<{
           name: `og:site_name`,
           content: 'Lukas Bach',
         },
+        {
+          name: `google-site-verification`,
+          content: 'xbg7EmRLFFlN2mVUh8zeGlM6LZTfTBqVM',
+        }
       ].concat(meta || [])}
     />
   )
