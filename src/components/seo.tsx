@@ -71,7 +71,7 @@ const SEO: React.FC<{
         },
         {
           name: `google-site-verification`,
-          content: 'xbg7EmRLFFlN2mVUh8zeGlM6LZTfTBqVM',
+          content: 'xbg7EmRLFFlN2mVUh8zeGlM6LZTfTBqVM-2LK5U5RTM',
         }
       ].concat(meta || [])}
     />
