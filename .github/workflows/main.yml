@@ -20,3 +20,5 @@ jobs:
         access-token: ${{ secrets.GH_SECRET }}
         deploy-branch: gh-pages
         gatsby-args: --no-color
+        git-config-name: lukasbachbot
+        git-config-email: bot@noreply.lukasbach.com
