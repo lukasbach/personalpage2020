@@ -30,7 +30,7 @@
     "gatsby-transformer-sharp": "^2.5.2",
     "mini-svg-data-uri": "^1.2.3",
     "node-fetch": "^2.6.0",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.1",
     "npm-api": "^1.0.0",
     "prismjs": "^1.20.0",
     "prop-types": "^15.7.2",
