@@ -26,7 +26,7 @@
     "gatsby-remark-images": "^3.3.8",
     "gatsby-remark-prismjs": "^3.5.9",
     "gatsby-source-filesystem": "^2.3.4",
-    "gatsby-transformer-remark": "^2.8.23",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^2.5.2",
     "mini-svg-data-uri": "^1.2.3",
     "node-fetch": "^2.6.0",
